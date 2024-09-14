@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKz-ae-e5p" userLabel="btnClick">
+                                <rect key="frame" x="185.33333333333334" y="629" width="59.666666666666657" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                <connections>
+                                    <action selector="changeToNextImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jEI-wv-5Ah"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eraser.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rO6-Zu-BXx" userLabel="imgGoodnight">
+                                <rect key="frame" x="0.0" y="159.66666666666666" width="430" height="428.66666666666674"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rO6-Zu-BXx" secondAttribute="height" multiplier="1:1" id="aoU-4p-sxE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MK8-ZS-Sfb">
+                                <rect key="frame" x="66" y="629" width="101" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Animation"/>
+                                <connections>
+                                    <action selector="toggleAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aah-L4-IdI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lW-Wo-xG5">
+                                <rect key="frame" x="257" y="629" width="68" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                <connections>
+                                    <action selector="btnReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nbx-5c-k8F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.1411764771" green="0.1686274707" blue="0.21568629149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="rO6-Zu-BXx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="64Y-LJ-b4o"/>
+                            <constraint firstItem="rO6-Zu-BXx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NdZ-P0-rah"/>
+                            <constraint firstItem="HKz-ae-e5p" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Zdw-kr-KTJ"/>
+                            <constraint firstItem="rO6-Zu-BXx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="dqj-X2-B1Q"/>
+                            <constraint firstItem="HKz-ae-e5p" firstAttribute="top" secondItem="rO6-Zu-BXx" secondAttribute="bottom" constant="40" id="i6d-qh-9Km"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnNextImage" destination="HKz-ae-e5p" id="kEp-Xz-KC1"/>
+                        <outlet property="btnResetTimer" destination="0lW-Wo-xG5" id="5sY-VZ-x6V"/>
+                        <outlet property="btnToggleAnimation" destination="MK8-ZS-Sfb" id="tTn-Ts-YRC"/>
+                        <outlet property="imgGoodnight" destination="rO6-Zu-BXx" id="oTM-NH-nGU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.242990654205606" y="3.2397408207343417"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eraser.fill" catalog="system" width="128" height="119"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
